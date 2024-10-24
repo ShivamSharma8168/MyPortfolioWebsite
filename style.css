@@ -53,88 +53,9 @@
         width: 100%;
     }
 }
-/* 
-.drop-content{
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    min-width: 160px;
-    z-index: 1;
-}
-.drop-content a{
-    padding: 12px 16px;
-    text-decoration: none;
-    /* display: block; */
-    /* color: #000000;
-    display: block;
-    
-
-    
-}
-.drop-content a:hover{
-    background-color: #ddd;
-    
-}
-.dropdown:hover .drop-content{
-    display: block;
-}  */ 
-/* new code  */
-/* #introbox{   
-    height: 100vh;
-    width: 100%;
-    background: rgb(237, 234, 234);
-    align-items: center;
-    justify-content: center;
-    /* text-align: center; */
-    
-
-/* #introbox .box{ */
-    /* transform: translate(15vw , 40vh); */
-    /* transform: translate(35vw , 40vh); */
-/* } */
-/* new code  */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap'); */
-/* 
-#typing-effect {
-    
-    font-family: "Cedarville Cursive", cursive;
-    
-  font-weight: 400;
-  font-style: normal;
-  
-    font-size: 2em;
-    color: #131212;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid rgb(16, 182, 242);
-    animation: typing 4s blink-caret 2s ease forwards;
-} */
-/* 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    /* from, to { border-color: transparent }
-    100% { border-color: orange; } */
-    /* from{
-        border-color: transparent;
-        
-    }
-    to{
-        border-color: #00B5E7;
-    }
-} */ 
-
-/* till here new code end  */
-
 body {
     overflow-x: hidden;
 }
-
 /* ----- BASE ----- */
 *{
     margin: 0;
@@ -173,8 +94,7 @@ html{
     cursor: pointer;
     transition: .4s;
     text-decoration: none;
-    color: rgb(57, 57, 57);
-    
+    color: rgb(57, 57, 57);    
 }
 .btn>i{
     margin-left: 10px;
@@ -185,7 +105,6 @@ html{
     font-size: 1.05rem;
     box-shadow:  5px 5px 15px rgba(19, 171, 241, 0.7);
 }
-
 /* Gloabal icon design  */
 i{
     font-size: 16px;
@@ -215,7 +134,6 @@ nav{
 .nav-logo{
    position: relative;
 }
-
 .nav-name{
     font-size: 30px;
     font-weight: 600;
@@ -226,37 +144,25 @@ nav{
     top: -15px; 
     right: -20px;
     font-size: 5em;
-
     color: var(--text-color-second);
 }
 .nav-menu, .nav_menu_list{
     display: flex;
 }
-
 /* new code  */
 #homebtn , #aboutbtn , #edbtn , #projectbtn , #contactbtn{
     opacity: 0;
 }
-/* #aboutbtn{
-    opacity: 0;
-} */
-
-
-
 .nav-menu .nav_list{
     list-style: none;
-    position: relative;
-    
+    position: relative;    
 }
 .nav-link{
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
     padding-inline: 5px;
-    margin-inline: 5px; 
-    
-    
-    
+    margin-inline: 5px;       
 }
 .nav-menu-btn{
     display: none;
@@ -285,7 +191,6 @@ nav{
 .wrapper{
     padding-inline: 10vw;
 }
-
 .featured-box{
     position: relative;
     display: flex;
@@ -293,7 +198,6 @@ nav{
     height: 90vh;
     min-height: 600px;
 }
-
 .featured-text{
     position: relative;
     display: flex;
@@ -360,18 +264,12 @@ nav{
 .icon:hover{
     /* color: var(--first-color); */
     color: rgb(3, 3, 211);
-    box-shadow: 10px 10px 30px rgba(1, 146, 250, 0.8);
-    
+    box-shadow: 10px 10px 30px rgba(1, 146, 250, 0.8);    
 }
 .icon:hover i{
     font-size: 1.5em; /* Adjust the size as needed */
-    transition: font-size 0.3s ease-in-out ;
-    
-    
+    transition: font-size 0.3s ease-in-out ;   
 }
-
-
-
 .featured-image{
     display: flex;
     justify-content: right;
@@ -484,7 +382,6 @@ h3{
 .about-btn a:hover{
     background: var(--first-color-hover);
 }
-
 .skills-box{
     margin: 10px;
 }
@@ -503,7 +400,6 @@ h3{
     padding: 2px 10px;
     border-radius: 5px;
 }
-
 .project-container{
     display: flex;
     width: 100%;
@@ -531,11 +427,8 @@ h3{
 }
 .project-box label a i{
     color: rgb(73, 75, 84);
-    margin: 10px;
-    
-     font-size: 28px; 
-    
-
+    margin: 10px;    
+     font-size: 28px;    
 }
 .project-box a img{
     width: 20%;
@@ -553,9 +446,7 @@ h3{
 }
 .education-box{
     position: relative;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
+    display: flex;    
     flex-direction: column;
     width: 30%;
     height: 400px;
@@ -563,7 +454,6 @@ h3{
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
-
 }
 .education-box i{
     margin:10px;
@@ -604,9 +494,7 @@ h3{
     height: 100%;
     transition: .4s;
     z-index: 1;
-
 }
-
 .project-box:hover.project-box::after,
 .education-box:hover.education-box::after,  /* new line */
 .contact-info:hover.contact-info::after{
@@ -626,7 +514,167 @@ h3{
     color: var(--color-white);
     z-index: 2;
 }
+/* new code  */
 
+.time-line{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;  
+}
+.containerExp{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    /* animation:  moveDown 1.2s linear forwards ; */
+    /* opacity: 0; */
+}
+
+/* @keyframes moveDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} */
+.text-box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;    
+    border-radius: 6px;
+    font-size: 15px;
+    background: var(--color-white);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+}
+.text-box::after{
+    content: "";
+        position: absolute;
+        bottom: -100%;
+        background: var(--second-color);
+        width: 100%;
+        height: 100%;
+        transition: .4s;
+        z-index: 1;
+} 
+.text-box:hover.text-box::after{
+    bottom: 0;
+}
+.text-box:hover.text-box h2,
+.text-box:hover.text-box>small,
+.text-box:hover.text-box>p{
+    color: var(--color-white);
+    z-index: 2;
+}  
+.left-containerExp{
+    left: 0;
+}
+.right-containerExp{
+    left: 50%;
+}
+.containerExp img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+.right-containerExp img{
+    left: -20px;
+}
+.time-line::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    /* background-color: #fff; */
+    background-color: var(--first-color);
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    /* animation:  moveLine 4s linear forwards;     */
+}
+.animate-now{
+    animation:  moveLine 4s linear forwards;
+
+}
+
+@keyframes moveLine{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.text-box h2{
+    font-weight: 600 ;
+}
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;     
+}
+.leftContainer-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top:28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff ;
+    right: -15px;
+}
+.rightContainer-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top:28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff ;
+    left: -14px;
+}
+@media screen and (max-width: 600px){
+    .time-line{
+        margin: 50px auto;
+    }
+    .time-line::after{
+        left:31px;
+    }
+    .containerExp{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .text-box{
+        font-size: 13px;
+    }
+    .text-box small{
+        margin-bottom: 10px;
+    }
+    .right-containerExp{
+        left: 0;
+    }
+    .left-containerExp img , .right-containerExp img{
+        left: 10px;
+    }
+    .leftContainer-arrow , .rightContainer-arrow{
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+}
 .contact-info{
     position: relative;
     display: flex;
@@ -672,7 +720,6 @@ h3{
     color: #777;
     z-index: 2;
 }
-
 .form-control{
     display: flex;
     flex-direction: column;
@@ -752,9 +799,6 @@ footer{
     font-size: 14px;
     margin-top: 10px;
 }
-
-
-
 /* Ensuring all elements respect box-sizing */
 *,
 *::before,
@@ -772,7 +816,6 @@ footer{
         opacity: 1;
     }
 }
-
 .nav_menu_list #homebtn ,#aboutbtn ,  #edbtn , #projectbtn , #contactbtn{
     animation: SlideButton 1s ease forwards;
 }

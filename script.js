@@ -118,9 +118,10 @@ sr.reveal('.featured-image', { delay: 300 })
 sr.reveal('.project-box', { interval: 200 })
 // effect on eduaction box 
 sr.reveal('.education-box', { interval: 200 })
+// text-box hover effect 
+sr.reveal('.text-box' , {interval: 200})
 // heading 
 sr.reveal('.top-header', {})
-//  SCROLL REVEAL LEFT_RIGHT ANIMATION
 
 //  ABOUT INFO & CONTACT INFO 
 const srLeft = ScrollReveal({
