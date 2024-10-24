@@ -17,6 +17,9 @@
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 
 }
+#experiencePage{
+    display: none;
+}
 
 #projectbtn {
     position: relative;
@@ -596,7 +599,7 @@ h3{
     width: 6px;
     height: 100%;
     /* background-color: #fff; */
-    background-color: var(--first-color);
+    background-color: var(--text-color-third);
     top: 0;
     left: 50%;
     margin-left: -3px;
