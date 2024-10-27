@@ -871,5 +871,6 @@ footer{
     align-items: center;
     /* position: fixed; */
     bottom: 0;
+    height: 30px;
     width: 100%;
 }
