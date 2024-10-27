@@ -861,3 +861,15 @@ footer{
 .nav_menu_list #homebtn ,#aboutbtn ,  #edbtn , #projectbtn , #contactbtn{
     animation: SlideButton 1s ease forwards;
 }
+
+.bottom-footer{
+    position: relative;
+ }
+.bottom-footer .countbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+}
