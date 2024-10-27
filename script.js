@@ -119,7 +119,8 @@ sr.reveal('.project-box', { interval: 200 })
 // effect on eduaction box 
 sr.reveal('.education-box', { interval: 200 })
 // text-box hover effect 
-sr.reveal('.text-box' , {interval: 200})
+// sr.reveal('.text-box' , {interval: 200})
+sr.reveal('.containerExp' , {interval: 200})
 // heading 
 sr.reveal('.top-header', {})
 

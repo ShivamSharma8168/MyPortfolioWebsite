@@ -17,9 +17,10 @@
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 
 }
-#experiencePage{
+
+/* #experiencePage{
     display: none;
-}
+} */
 
 #projectbtn {
     position: relative;
@@ -137,10 +138,11 @@ nav{
 .nav-logo{
    position: relative;
 }
-.nav-name{
+.nav-name a{
     font-size: 30px;
     font-weight: 600;
     color: var(--text-color-third);
+    text-decoration: none;
 }
 .nav-logo span{
     position: absolute;
@@ -467,6 +469,7 @@ h3{
 }
 .education-box p{
     margin:5px;
+    padding: 8px;
 }
 .project-box>i{
     font-size: 50px;
@@ -522,8 +525,32 @@ h3{
 .time-line{
     position: relative;
     max-width: 1200px;
-    margin: 100px auto;  
+    margin: 100px auto; 
 }
+
+ .time-line::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: #ffffff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation:  moveLine 5s linear forwards;    
+    /* transition:  height 4s linear; */
+ }
+
+@keyframes moveLine{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+} 
+
 .containerExp{
     padding: 10px 50px;
     position: relative;
@@ -531,8 +558,19 @@ h3{
     /* animation:  moveDown 1.2s linear forwards ; */
     /* opacity: 0; */
 }
+.containerExp img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+.right-containerExp img{
+    left: -20px;
+}
 
-/* @keyframes moveDown{
+ @keyframes moveDown{
     0%{
         opacity: 0;
         transform: translateY(-50px);
@@ -541,7 +579,7 @@ h3{
         opacity: 1;
         transform: translateY(0px);
     }
-} */
+} 
 .text-box{
     display: flex;
     justify-content: center;
@@ -656,7 +694,8 @@ h3{
         left:31px;
     }
     .containerExp{
-        width: 100%;
+        /* width may be adjusted acc to content  */
+        width: 110%;  
         padding-left: 80px;
         padding-right: 25px;
     }
