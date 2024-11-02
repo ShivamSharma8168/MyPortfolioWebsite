@@ -30,9 +30,15 @@ window.addEventListener('click', function(event) {
 });
 
 function navigateTo(value) {
-  if (value) {
+  if(value === "certifications/index2.html"){
+    window.open(value , '_blank');
+  }
+  else {
       window.location.href = value;
   }
+  // to stop double opening of the page 
+  document.getElementById('moreOptions').value = "";
+  
 }
 
 
