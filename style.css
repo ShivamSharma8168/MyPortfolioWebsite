@@ -538,8 +538,9 @@ h3{
     left: 50%;
     margin-left: -3px;
     z-index: -1;
+    
     animation:  moveLine 5s linear forwards;    
-    /* transition:  height 4s linear; */
+ 
  }
 
 @keyframes moveLine{
