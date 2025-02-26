@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap : https://shivamportfolio8168.netlify.app/sitemap.xml
+Sitemap : https://shivam8168-devops.netlify.app//sitemap.xml
