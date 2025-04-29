@@ -30,6 +30,15 @@
         margin-inline: 5px;
         font-size: 14px;
     }
+    .project-section1 .project-box1{
+        width: 50%;
+    }
+    .project-section1 .project-box1 video{
+        padding: 8px;
+    }
+    .project-section1 p{
+        padding: 20px;
+    }
     
    
 }
@@ -102,6 +111,9 @@
     .image, .image img{
         width: 200px;
         height: 200px;
+    }
+    .featured-image .image{
+        margin-top: 50px;
     }
     .row{
         display: flex;

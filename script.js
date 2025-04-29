@@ -141,6 +141,7 @@ const srLeft = ScrollReveal({
 
 srLeft.reveal('.about-info', { delay: 100 })
 srLeft.reveal('.contact-info', { delay: 100 })
+srLeft.reveal('.project-box1', { delay: 100 })
 
 // about skill and form box 
 const srRight = ScrollReveal({
@@ -152,6 +153,7 @@ const srRight = ScrollReveal({
 
 srRight.reveal('.skills-box', { delay: 100 })
 srRight.reveal('.form-control', { delay: 100 })
+srRight.reveal('.project-section1', { delay: 100 })
 
 // change active link 
 const sections = document.querySelectorAll('section[id]')

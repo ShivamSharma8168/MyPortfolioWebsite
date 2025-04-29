@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam | My Project</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="shortcut icon" href="assets/S favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <section class="section" id="about">
+        <div class="top-header">
+            <h1>My Project</h1>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="about-info">
+                    <div class="project-box1">
+                        <a href="" title="click to open">
+                            <video autoplay loop muted playsinline>
+                                <source src="assets/cicd_pipeline_video.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+
+                        </a>
+
+
+                    </div>
+                    <br>
+                    <h3>Jenkins CI/CD Pipeline</h3>
+                    <ul>
+                        <div class="intro-section">
+                            
+                            <b>Introduction:</b> <br> The purpose of this project is to gain hands-on experience on DevOps concepts. In this project, I designed and deployed a fully containerized application using docker, AWS EC2 and linux environments. This project showcase my skills in DevOps practices including conatiner orcestration , linux and cloud infrastructure setup enmabling seamless application delievery and management.
+                        
+                        </div>
+                        <div class="intro-section tool-section">
+                            <b>Following tools are used in this project:</b>
+                            <li>
+                                Version Control: <br>
+                                Git along with Github(to store source code) is used for version control, allowing me to track changes, managing source code, configuration files, and Docker setup throughout the project.
+                            </li>
+                            <li>
+                                Containerization: <br>
+                                Docker was used to containerize the application, ensuring it could run consistently accross different environments. I created a Dockerfile to define setup and built(image pushed to DockerHub) and packaged the application with all it's dependencies.
+                            </li>
+                            <li>
+                                CI/CD: <br>
+                                Jenkins(on Local machine) was used to automate the build, test and deployement process. I setup a pipeline script that pulls the code from Git,build image , test and deploy the updated container on AWS EC2. 
+                                
+                            </li>
+                            <li>
+                                LocalTunnel: <br>
+                                Used localtunnel to expose locally installed jenkins to the Internet by creating a secure URL.
+                            </li>
+                            <li>
+                                Webhooks: <br>
+                                Github Webhooks are used to trigger the jenkins pipeline to automate the build when new code(or new changes) are pushed to github.
+                            </li>
+                            <li>
+                                WebServer: <br>
+                                Nginx was used as a WebServer to server my portfolio application on EC2, handling incoming HTTP traffic requests, served static files efficiently ensuring fast and smooth delievery.
+                            </li>
+                            <li>
+                                AWS EC2: <br>
+                                AWS Elastic compute cloud was used to host and run the application in an reliable cloud environment. I launched an EC2 instance, installed Nginx and deployed my porject there ensuring high availability.
+                                
+                            </li>
+
+
+                        </div>
+                        <div class="intro-section good-practices">
+                            <b>Good Practices I considered:</b>
+                            <li>
+                                Local Installation: <br>
+                                Installed Jenkins locally not on EC2 instance to avoid high use of EC2 resources. <br>
+                                the tool LocalTunnel helped me to use Jenkins in professional manner.
+                            </li>
+                            <li>
+                                Email Notification: <br>
+                                 Configured and utilized Email Notification service to get build information quickly whether build is successful or not so that instant action can be taken.
+                            </li>
+                            <li>
+                                Budget and Alarms: <br>
+                                Setted up budget and alarms on AWS so that I can avoid charges and remain within the free-tier.
+                            </li>
+                            <li>
+                                Backup: <br>
+                                As Jenkins is locally installed, I used a script that backups my jobs and important files to drive. 
+                                
+                            </li>
+                            <li>
+                                Task Scheduler: <br>
+                                Windows task Scheduler is used to run the script on a particular time that backups all important jobs, configuration files everyday.
+                            </li>
+
+
+                        </div>
+                        
+                    </ul>
+                    <h3>Project links</h3>
+                    <div class="social_icons">
+                        
+                        <div class="project-box1 github-readme">
+                            <a href="http://35.175.145.107/">
+                                <video autoplay loop muted playsinline>
+                                    <source src="assets/livestreambutton.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                                <span id="video-text">live from EC2</span>
+                                
+                            </a>
+                        </div>
+                        <div class="project-box1 github-readme">
+                            <a href="https://github.com/ShivamSharma8168/CICD_Readme/blob/master/Readme.md">
+                                <video autoplay loop muted playsinline>
+                                    <source src="assets/readme.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                                <span id="video-text" >Github readme</span>
+                                
+                            </a>
+                            
+                        </div>
+                        <!-- <div class="project-box1 github-readme">
+                            <a href="">
+                                <video autoplay loop muted playsinline>
+                                    <source src="assets/Githubrepo.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                                <span id="video-text" >Github Repo</span>
+                                
+                            </a>
+                            
+                        </div> -->
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
