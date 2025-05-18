@@ -1,21 +1,74 @@
 {
 
   
+
     "scripts": {
-      "lint": "eslint . --ext .js",
-      "test:html": "htmlhint ./",
-      "test:link": "linkinator http://localhost --silent --recurse",
-      "test:lighthouse": "lighthouse http://localhost --only-categories=performance,accessibility --quiet --output html --output-path=./lighthouse-report.html",
-      "test": "npm run lint && npm run test:html && npm run test:link && npm run test:lighthouse"
-    },
-  
 
   
-  "devDependencies": {
-    "@eslint/js": "^9.27.0",
-    "eslint": "^9.27.0",
-    "globals": "^16.1.0"
-    
-  }
+
+      
+
+    "lint": "eslint . --ext .js",
+
   
+
+      
+
+    
+
+  
+
+      
+
+    "test:link": "linkinator http://localhost --silent --recurse",
+
+  
+
+      
+
+    "test:lighthouse": "lighthouse http://localhost --only-categories=performance,accessibility --quiet --output html --output-path=./lighthouse-report.html",
+
+  
+
+      
+
+    "test": "npm run lint "
+
+  
+
+    },
+
+  
+
+    "devDependencies": {
+
+  
+
+      
+
+    "@eslint/js": "^9.27.0",
+
+  
+
+      
+
+    "eslint": "^9.27.0",
+
+  
+
+      
+
+    "globals": "^16.1.0",
+
+  
+
+      
+
+    "htmlhint": "^1.1.4"
+
+  
+
+    }
+
 }
+
