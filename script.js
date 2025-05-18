@@ -1,3 +1,4 @@
+/* global Typed, ScrollReveal */
 
 document.getElementById('moreOptions').addEventListener('change', function() {
   let value = this.value;
@@ -29,6 +30,7 @@ window.addEventListener('click', function(event) {
   }
 });
 
+// eslint-disable-next-line no-unused-vars
 function navigateTo(value) {
   if(value === "certifications/index2.html"){
     window.open(value , '_blank');
@@ -62,6 +64,7 @@ window.addEventListener('click', function (event) {
 });
 
 // navigation function s 
+/* eslint-disable no-unused-vars */
 function myMenuFunction() {
   var menuBtn = document.getElementById("myNavMenu");
 
@@ -99,6 +102,7 @@ function headerShadow() {
   }
 }
 // typing effect 
+
 var typingEffect = new Typed(".typedText", {
   strings: ["DevOps Engineer", "Java Developer" ],
   loop: true,
@@ -107,7 +111,9 @@ var typingEffect = new Typed(".typedText", {
   backDelay: 2000
 })
 
+
 // scroll reveal animations 
+
 const sr = ScrollReveal({
   origin: 'top',
   distance: '80px',
@@ -132,6 +138,7 @@ sr.reveal('.containerExp' , {interval: 200})
 sr.reveal('.top-header', {})
 
 //  ABOUT INFO & CONTACT INFO 
+
 const srLeft = ScrollReveal({
   origin: 'left',
   distance: '80px',
@@ -144,6 +151,7 @@ srLeft.reveal('.contact-info', { delay: 100 })
 srLeft.reveal('.project-box1', { delay: 100 })
 
 // about skill and form box 
+
 const srRight = ScrollReveal({
   origin: 'right',
   distance: '80px',
