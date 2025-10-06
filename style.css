@@ -900,6 +900,12 @@ footer{
     box-sizing: border-box;
 }
 
+/* Use semantic class names for SEO and accessibility */
+/* Example: .project-title, .main-content, .nav-menu */
+
+/* Ensure sufficient color contrast for accessibility */
+/* Use :focus styles for keyboard navigation */
+
 @keyframes SlideButton{
     0%{
         transform: translateX(200px);

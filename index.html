@@ -5,31 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Shivam Sharma - DevOps & Cloud Enthusiast | Portfolio, a DevOps Engineer passionate about CI/CD, cloud, and automation. Explore my projects and skills!">
+        content="Shivam Sharma - DevOps & Cloud Enthusiast | Portfolio. Explore my expertise in CI/CD, cloud infrastructure, automation, and DevOps engineering.">
     <!-- unicons link  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
     <link rel="shortcut icon" href="assets/S favicon.ico" type="image/x-icon">
-    <title>Shivam - DevOps Engineer
-    </title>
+    <title>Shivam Sharma — DevOps Engineer Portfolio</title>
+    <meta name="description" content="Shivam Sharma - DevOps & Cloud Enthusiast | Portfolio. Explore my expertise in CI/CD, cloud infrastructure, automation, and DevOps engineering.">
+    <meta name="author" content="Shivam Sharma">
+    <meta name="keywords" content="Shivam Sharma, DevOps Engineer, Cloud, CI/CD, Automation, Infrastructure, Portfolio, Projects">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://shivam8168.netlify.app/index.html" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shivam Sharma — DevOps Engineer Portfolio" />
+    <meta property="og:description" content="Portfolio of Shivam Sharma, DevOps Engineer. Specializing in CI/CD, cloud, automation, and infrastructure." />
+    <meta property="og:url" content="https://shivam8168.netlify.app/index.html" />
+    <meta property="og:image" content="https://shivam8168.netlify.app/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shivam Sharma — DevOps Engineer Portfolio" />
+    <meta name="twitter:description" content="Portfolio of Shivam Sharma, DevOps Engineer. Specializing in CI/CD, cloud, automation, and infrastructure." />
+    <meta name="twitter:image" content="https://shivam8168.netlify.app/og-image.jpg" />
+
+    <!-- Pagination hints -->
+    <link rel="next" href="https://shivam8168.netlify.app/index2.html" />
+
+    <!-- Structured data -->
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Shivam Sharma",
-          "url": "https://shivam8168.netlify.app/",
-          "sameAs": [
-            "https://www.linkedin.com/in/shivamsharma8168/",
-            "https://github.com/ShivamSharma8168"
-          ],
-          
-          "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Guru Gobind Singh Indraprastha University"
-          },
-          "knowsAbout": ["Java", "DevOps", "Git" , "SQL" ,"Kubernetes" , "Docker" , "Linux" , "Jenkins" ]
-          
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "url": "https://shivam8168.netlify.app/",
+              "name": "Shivam Sharma — DevOps Engineer Portfolio"
+            },
+            {
+              "@type": "Person",
+              "name": "Shivam Sharma",
+              "url": "https://shivam8168.netlify.app/"
+            },
+            {
+              "@type": "WebPage",
+              "name": "Portfolio — Home",
+              "url": "https://shivam8168.netlify.app/index.html",
+              "isPartOf": { "@type": "WebSite", "url": "https://shivam8168.netlify.app/" }
+            }
+          ]
         }
     </script>
 
@@ -163,9 +192,8 @@
                         <div class="about-info">
                             <h3>My introduction</h3>
                             <p>
-                                Hey there! I'm Shivam Sharma, an aspiring DevOps engineer with a Bachelor's in Computer
-                                Science from JIMS Greater Noida. Currently diving deep into
-                                CI/CD, cloud computing, containerization, and infrastructure as code, I’m passionate
+                                Hey there! I'm Shivam Sharma, Current DevOps Engineer at Skillquestlearnings with a Bachelor's in Computer
+                                Science from JIMS Greater Noida. Having a good hands-on experience in CI/CD, AWS , containerization, and infrastructure as code, I’m passionate
                                 about automating workflows and optimizing system performance. My journey includes
                                 hands-on experience with tools like Docker, Kubernetes, Git, and Jenkins, backed by
                                 continuous learning through platforms like Internshala and Simplilearn. When I'm not
@@ -332,7 +360,7 @@
                 <div class="project-section1">
 
                     <div class="project-box1">
-                        <a href="" target="_blank" title="click to open">
+                        <a href="https://infraguard.me/" target="_blank" title="click to open">
                             <img src="assets/infraguard_logo.png" alt="" style=" height: 160px;">
                         </a>
                     </div>
@@ -494,6 +522,19 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- js file link  -->
     <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('img:not([loading])').forEach(img => {
+            img.setAttribute('loading', 'lazy');
+            img.setAttribute('decoding', 'async');
+            if (!img.hasAttribute('alt')) img.setAttribute('alt', 'Portfolio image');
+        });
+        document.querySelectorAll('a[target="_blank"]').forEach(a => {
+            const href = a.getAttribute('href') || '';
+            if (/^https?:\/\//i.test(href) && !href.includes(location.host)) {
+                a.setAttribute('rel', (a.getAttribute('rel') || '') + ' noopener noreferrer');
+            }
+        });
+    </script>
 </body>
 
 </html>
