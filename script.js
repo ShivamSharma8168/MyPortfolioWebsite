@@ -104,7 +104,7 @@ function headerShadow() {
 // typing effect 
 
 var typingEffect = new Typed(".typedText", {
-  strings: ["DevOps Engineer", "Java Developer" ],
+  strings: ["DevOps Engineer", "Automation Engineer"  ],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
