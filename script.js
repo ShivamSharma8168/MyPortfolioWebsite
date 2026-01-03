@@ -186,3 +186,51 @@ function scrollActive() {
   })
 }
 window.addEventListener('scroll', scrollActive)
+
+// THEME TOGGLE: light / dark
+document.addEventListener('DOMContentLoaded', function () {
+  var toggle = document.getElementById('theme-toggle')
+  const hirebtn = document.getElementById('hiremebtn').style = "color: white; text-decoration: none;";
+  if (!toggle) return
+
+  var icon = toggle.querySelector('i')
+
+  function setIcon (isDark) {
+    if (!icon) return
+    if (isDark) {
+      icon.classList.remove('uil-moon')
+      icon.classList.add('uil-sun')
+      toggle.setAttribute('aria-label', 'Switch to light theme')
+    } else {
+      icon.classList.remove('uil-sun')
+      icon.classList.add('uil-moon')
+      toggle.setAttribute('aria-label', 'Switch to dark theme')
+    }
+  }
+
+  var storedTheme = null
+  try {
+    storedTheme = window.localStorage.getItem('theme')
+  } catch (e) {
+    storedTheme = null
+  }
+
+  var prefersDark = false
+  if (window.matchMedia) {
+    prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+
+  var useDark = storedTheme === 'dark' || (!storedTheme && prefersDark)
+  if (useDark) {
+    document.body.classList.add('dark-theme')
+  }
+  setIcon(useDark)
+
+  toggle.addEventListener('click', function () {
+    var isDarkNow = document.body.classList.toggle('dark-theme')
+    try {
+      window.localStorage.setItem('theme', isDarkNow ? 'dark' : 'light')
+    } catch (e) {}
+    setIcon(isDarkNow)
+  })
+})

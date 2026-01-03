@@ -18,6 +18,25 @@
 
 }
 
+/* ----- DARK THEME VARIABLES (OVERRIDE ON BODY) ----- */
+body.dark-theme{
+    --body-color: #020617; /* deep background */
+    --color-white: #020617; /* card/surface background */
+
+    --text-color-second: #e5e7eb;
+    --text-color-third: #38bdf8;
+
+    --first-color: #4f46e5;
+    --first-color-hover: #6366f1;
+
+    --second-color: #22d3ee;
+    --third-color: #eab308;
+    --first-shadow-color: rgba(15, 23, 42, 0.85);
+
+    background: var(--body-color);
+    color: var(--text-color-second);
+}
+
 /* #experiencePage{
     display: none;
 } */
@@ -108,6 +127,16 @@ html{
     color: var(--color-white);
     font-size: 1.05rem;
     box-shadow:  5px 5px 15px rgba(19, 171, 241, 0.7);
+}
+
+/* Buttons in dark theme */
+body.dark-theme .btn{
+    background: #111827;
+    color: #e5e7eb;
+}
+
+body.dark-theme .btn:hover{
+    box-shadow: 0 10px 30px rgba(34, 211, 238, 0.5);
 }
 /* Gloabal icon design  */
 i{
@@ -893,6 +922,17 @@ footer{
     font-size: 14px;
     margin-top: 10px;
 }
+
+/* Footer in dark theme */
+body.dark-theme footer{
+    background: #020617;
+}
+
+body.dark-theme .footer_menu_list a,
+body.dark-theme .top-footer p,
+body.dark-theme .bottom-footer{
+    color: #e5e7eb;
+}
 /* Ensuring all elements respect box-sizing */
 *,
 *::before,
@@ -931,4 +971,83 @@ footer{
     bottom: 0;
     height: 30px;
     width: 100%;
+}
+
+/* ----- THEME TOGGLE BUTTON ----- */
+.theme-toggle{
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 110;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.18);
+    backdrop-filter: blur(12px);
+    transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+.theme-toggle i{
+    font-size: 20px;
+}
+
+.theme-toggle:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.25);
+}
+
+.theme-toggle:active{
+    transform: translateY(0);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+}
+
+body.dark-theme .theme-toggle{
+    background: rgba(15, 23, 42, 0.96);
+    color: #e5e7eb;
+    border-color: rgba(51, 65, 85, 0.9);
+}
+
+/* Nav dark background refinement */
+body.dark-theme nav{
+    background: rgba(2, 6, 23, 0.96);
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.9);
+}
+
+/* Scroll button refinement in dark theme */
+body.dark-theme .scroll-btn{
+    background: #020617;
+    color: var(--text-color-second);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.85);
+}
+
+/* Card-style elements in dark theme */
+body.dark-theme .about-info,
+body.dark-theme .project-section1,
+body.dark-theme .project-box,
+body.dark-theme .project-box1,
+body.dark-theme .education-box,
+body.dark-theme .text-box{
+    background: #020617;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.95);
+}
+
+body.dark-theme .about-info p,
+body.dark-theme .education-box p,
+body.dark-theme .project-section1 p,
+body.dark-theme .text-box p,
+body.dark-theme .top-header span{
+    color: #9ca3af;
+}
+
+@media screen and (max-width: 600px){
+    .theme-toggle{
+        top: 92px;
+        
+    }
 }
