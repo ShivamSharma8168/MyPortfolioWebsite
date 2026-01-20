@@ -727,6 +727,35 @@ video {
     color: var(--color-white);
     z-index: 2;
 }  
+
+/* Experience bullets (replace <p><br> formatting with a real list) */
+.text-box .experience-bullets{
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.text-box .experience-bullets li{
+    display: flex;
+    gap: 10px;
+    line-height: 1.55;
+    margin: 6px 0;
+    color: var(--text-color-second);
+}
+
+.text-box .experience-bullets li::before{
+    content: "⤷";
+    flex: 0 0 auto;
+}
+
+.text-box:hover .experience-bullets,
+.text-box:hover .experience-bullets li{
+    color: var(--color-white);
+}
 .left-containerExp{
     left: 0;
 }
