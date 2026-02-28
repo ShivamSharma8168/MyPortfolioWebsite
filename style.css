@@ -361,7 +361,7 @@ nav{
     animation: imgFloat 7s ease-in-out infinite;
 }
 .image img{
-    width: 380px;
+    width: 342px;
     height: 380px;
     object-fit: cover;
 }
