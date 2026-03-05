@@ -336,6 +336,14 @@ nav{
     box-shadow: 10px 10px 30px rgba(1, 146, 250, 0.8);    
 }
 .icon:hover i{
+#ec2-instance-popup{
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+#ec2-instance-popup::backdrop{
+    background: var(--first-shadow-color);
+}
     font-size: 1.5em; /* Adjust the size as needed */
     transition: font-size 0.3s ease-in-out ;   
 }
