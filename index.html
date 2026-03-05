@@ -344,7 +344,7 @@
                         </a>
                     </div>
                     <span>CI/CD pipeline </span>
-                    <span> <a href="http://44.208.36.56/"
+                    <span> <a id="ec2-access-link" href="http://44.208.36.56/"
                             style="text-decoration: none; font-size: large; font-weight: 600;">Access from EC2
                         </a></span>
                     <br>
@@ -372,7 +372,7 @@
                         <div class="text-box">
                             <h2>Bachelor of Technology</h2>
                             <small>Computer Science &amp; Engineering - JIMS Greater Noida <b>(GGSIPU)</b> </small> 
-                            <p>2022-Present</p>
+                            <p>2022-March,2026</p>
                             <p>
                                 Pursuing a Bachelor’s in Computer Science and Engineering, equipped with strong engineering fundamentals and eager to apply knowledge to real-world problems and impactful technological solutions.
                             </p> 
@@ -506,6 +506,23 @@
         </footer>
 
     </div>
+
+    <!-- EC2 stopped popup -->
+    <dialog id="ec2-instance-popup" aria-labelledby="ec2-popup-title" aria-describedby="ec2-popup-desc">
+        <div style="padding: 18px 18px 14px; max-width: 520px; background: var(--color-white); color: var(--text-color-second); border-radius: 12px; box-shadow: 0 8px 30px var(--first-shadow-color);">
+            <h3 id="ec2-popup-title" style="margin: 0 0 10px; color: var(--text-color-second);">Instance unavailable</h3>
+            <p id="ec2-popup-desc" style="margin: 0 0 14px; line-height: 1.5;">
+                The Instance was stopped due to free tier limitations, You can read more about the project in the documentation by clicking the below button.
+                <a href="projectpage/index3.html" target="_blank" rel="noopener noreferrer" style="color: var(--text-color-third); text-decoration: none; font-weight: 600;">here</a>.
+            </p>
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                <a class="btn" href="projectpage/index3.html" target="_blank" rel="noopener noreferrer">Open Documentation</a>
+                <form method="dialog" style="margin: 0;">
+                    <button class="btn" type="submit">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
     <!-- typed js cdn link  -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- scroll reveal link  -->
@@ -513,6 +530,22 @@
     <!-- js file link  -->
     <script src="script.js"></script>
     <script>
+        (function () {
+            const ec2Link = document.getElementById('ec2-access-link');
+            const popup = document.getElementById('ec2-instance-popup');
+
+            if (ec2Link && popup) {
+                ec2Link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (typeof popup.showModal === 'function') {
+                        popup.showModal();
+                    } else {
+                        alert('The Instance was stopped due to free tier limitations. You can read more about the project in the documentation here at page projectpage/index3.html');
+                    }
+                });
+            }
+        })();
+
         document.querySelectorAll('img:not([loading])').forEach(img => {
             img.setAttribute('loading', 'lazy');
             img.setAttribute('decoding', 'async');
