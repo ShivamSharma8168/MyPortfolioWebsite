@@ -88,7 +88,7 @@
     .featured-box{
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
+        height: 105vh;
     }
     .featured-text{
         width: 100%;
@@ -109,8 +109,8 @@
         /* margin-top: 20px; */
     }
     .image, .image img{
-        width: 250px;
-        height: 300px;
+        width: 190px;
+        height: 210px;
     }
     .featured-image .image{
         margin-top: 50px;
