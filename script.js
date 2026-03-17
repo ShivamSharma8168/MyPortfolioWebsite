@@ -234,3 +234,84 @@ document.addEventListener('DOMContentLoaded', function () {
     setIcon(isDarkNow)
   })
 })
+
+// ai agent 
+const chatToggle = document.getElementById("chat-toggle");
+const chatBox = document.getElementById("chat-box");
+const chatCloseBtn = document.getElementById("chat-close-btn");
+const sendBtn = document.getElementById("send-btn");
+const input = document.getElementById("chat-input");
+const messages = document.getElementById("chat-messages");
+
+// Toggle chat
+chatToggle.onclick = () => {
+  chatBox.classList.toggle("active");
+  input.focus();
+};
+
+// Close chat
+chatCloseBtn.onclick = () => {
+  chatBox.classList.remove("active");
+};
+
+// Send message
+async function sendMessage() {
+  const text = input.value.trim();
+  if (!text) return;
+
+  // Show user message
+  const userMessageDiv = document.createElement("div");
+  userMessageDiv.className = "chat-message user-message";
+  userMessageDiv.innerHTML = `<div class="message-content">${text}</div>`;
+  messages.appendChild(userMessageDiv);
+  input.value = "";
+  messages.scrollTop = messages.scrollHeight;
+
+  // Show "Shivam is typing..." indicator
+  const typingDiv = document.createElement("div");
+  typingDiv.className = "chat-message bot-message typing-indicator";
+  typingDiv.innerHTML = `<div class="message-content"><span>Shivam is typing</span><span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></div>`;
+  messages.appendChild(typingDiv);
+  messages.scrollTop = messages.scrollHeight;
+
+  // Call your backend
+  try {
+    const res = await fetch(
+      "https://ai-portfolio-agent.sharma-shiv7027.workers.dev",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message: text }),
+      }
+    );
+
+    const data = await res.json();
+
+    // Remove typing indicator
+    typingDiv.remove();
+
+    // Show AI reply
+    const botMessageDiv = document.createElement("div");
+    botMessageDiv.className = "chat-message bot-message";
+    botMessageDiv.innerHTML = `<div class="message-content">${data.reply}</div>`;
+    messages.appendChild(botMessageDiv);
+    messages.scrollTop = messages.scrollHeight;
+  } catch (error) {
+    // Remove typing indicator on error
+    typingDiv.remove();
+    const errorDiv = document.createElement("div");
+    errorDiv.className = "chat-message bot-message";
+    errorDiv.innerHTML = `<div class="message-content">Sorry, I couldn't process your message. Please try again.</div>`;
+    messages.appendChild(errorDiv);
+    messages.scrollTop = messages.scrollHeight;
+  }
+}
+
+sendBtn.onclick = sendMessage;
+
+// Enter key support
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
