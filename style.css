@@ -1159,6 +1159,7 @@ body.dark-theme .top-header span{
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+  
 }
 
 .chat-toggle-close {
@@ -1479,7 +1480,7 @@ body.dark-theme .chat-toggle-btn:hover {
     width: calc(100% - 48px);
     height: 60vh;
     max-height: 470px;
-    bottom: 80px;
+    bottom: 90px;
     right: 24px;
     left: 24px;
   }
@@ -1495,6 +1496,7 @@ body.dark-theme .chat-toggle-btn:hover {
   }
 
   .chat-input-field {
+    width: 100%;
     padding: 8px 12px;
     font-size: 13px;
   }
