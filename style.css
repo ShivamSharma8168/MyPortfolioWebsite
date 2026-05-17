@@ -729,12 +729,27 @@ video {
 .text-box:hover.text-box::after{
     bottom: 0;
 }
-.text-box:hover.text-box h2,
-.text-box:hover.text-box>small,
-.text-box:hover.text-box>p{
-    color: var(--color-white);
+
+
+.text-box h2,
+.text-box .heading,
+.text-box>small,
+.text-box>p{
+    position: relative;
     z-index: 2;
-}  
+}
+
+.text-box .heading{
+    color: var(--text-color-second);
+    font-weight: 500;
+}
+
+.text-box:hover h2,
+.text-box:hover .heading,
+.text-box:hover>small,
+.text-box:hover>p{
+    color: var(--color-white);
+}
 
 /* Experience bullets (replace <p><br> formatting with a real list) */
 .text-box .experience-bullets{
