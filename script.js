@@ -1,5 +1,13 @@
 /* global Typed, ScrollReveal */
 
+const profileImage = document.getElementById('profile-image');
+const profileImages = ['assets/MyPhoto-copy.png', 'assets/MyImgAvatar.png'];
+
+if (profileImage) {
+  const randomProfileImage = profileImages[Math.floor(Math.random() * profileImages.length)];
+  profileImage.src = randomProfileImage;
+}
+
 document.getElementById('moreOptions').addEventListener('change', function() {
   let value = this.value;
   if (value) {
